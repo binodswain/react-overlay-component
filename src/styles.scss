@@ -1,3 +1,95 @@
 .app {
     text-align: center;
 }
+
+.overlay-wrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s;
+
+    .overlay-content {
+        padding: 2.9em;
+        background-color: white;
+        max-width: 500px;
+        z-index: 1;
+        position: relative;
+
+        .overlay-close {
+            top: 0;
+            right: 0;
+            position: absolute;
+            cursor: pointer;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAChklEQVR4Xu2au0oFMRCGfwttxUZstBbfwk7wfnlJryAqKBa+hghaioU+gFYysgNL2LObzdyEzWnPbib/N/8k2SRzmPhvbuL6UQFUB0ycQC2BiRugDoK1BGoJTJxALYGJG0BlFtgAsAbg3hnmNoBXAM+SuNISIPFPABYBHAO4k3RmxLt7AC4AfAHYlECQAGDxy03Hv50gsPj5Ju6HBEIpgFQ8J88aQiqe4xZDKAWwBeAawEKHba0g7AM4B8CZb4emmLsAHkeU0d+jpQDoXRqErpwgDIk/KB2EJQC8IJiJlzqA3WbpBMrsWY/tizPPnZc6gNvZAXCpXA7m4rUcYAHBRbw2AGpPwwlu4i0ASCEcAji1rPl0mtQaA9J2aU6mpeqYdYK7eCsHMIwxEELEWwOg9nMgkEtcbd+2q1UJtGP0QfhpVqOzlrfieX5oaewBgPpAHzG0ju8aE7r6SGt7c/EeJdAWlwvBTbw3gBwnuIr/jwBoTDgBcDNUu1r/e40BOdlnTa4QvADk1r87BA8AfeKp5qkPXbMDOYE2Wm+17N7VjjWAIfE01ZH4WVOkOQRLADni+Syh71lTCFYAxohnZ4ZAsABQIj7nA8rECdoAJOJzIRxpnkBpAtAQ7w5BC4CmeFcIGgAsxDOEvj1GGhPE5SAFYCk+B4L4GE4CwEO8OYRSAEOnQRabGUNb7nSE9jB22VwKYL25GLGSBLT+np8F/r25I/DiBYDipBCsxbO2FEKxeI0NEYaw5LWH11BgCJ+lmWeapSXQdhpBWC25nDDWrsnzdEnjDcBo27fb0QAg1BH7egUQyz8+enVAfA5ie1AdEMs/Pnp1QHwOYntQHRDLPz56dUB8DmJ78Au7scRB9pJbHwAAAABJRU5ErkJggg==")
+                no-repeat center center fixed;
+            width: 45px;
+            height: 45px;
+            background-color: grey;
+        }
+    }
+}
+
+.backdrop {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.62);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.react-overlay {
+    &.react-open {
+        .backdrop {
+            opacity: 1;
+        }
+        opacity: 1;
+    }
+
+    &.react-opening {
+        .backdrop {
+            opacity: 1;
+        }
+        opacity: 1;
+    }
+
+    &.react-closed {
+        .backdrop {
+            opacity: 0;
+        }
+        // visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+
+    &.react-closing {
+        .backdrop {
+            opacity: 0;
+        }
+        opacity: 0;
+    }
+
+    &.react-hidden {
+        .backdrop {
+            opacity: 0;
+        }
+        opacity: 0;
+        // visibility: hidden;
+        display: none;
+    }
+}

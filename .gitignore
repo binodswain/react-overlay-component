@@ -90,3 +90,5 @@ typings/
 example/build/
 dist
 build
+dist
+.vscode
