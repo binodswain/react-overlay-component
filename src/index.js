@@ -115,8 +115,6 @@ class RootComponent extends Component {
         } = configs;
         const { overlayState, prevState } = this.state;
 
-        console.log(document.activeElement);
-
         const className = [
             styles["overlay-wrapper"],
             styles["react-overlay"],
