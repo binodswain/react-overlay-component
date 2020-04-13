@@ -20,13 +20,17 @@ const updateDom = (flag) => {
     }
 };
 
+const updateFocus = (el) => el && el.focus();
+
 class RootComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
             overlayState: STATES.HIDDEN,
             prevState: props.isOpen,
+            initiator: null,
         };
+        this.ref = React.createRef();
     }
     setOverlayState = (val) => {
         this.setState({
@@ -51,6 +55,7 @@ class RootComponent extends Component {
             return {
                 overlayState: STATES.OPENING,
                 prevState: isOpen,
+                initiator: document.activeElement,
             };
         } else {
             return {
@@ -60,10 +65,25 @@ class RootComponent extends Component {
         }
     }
 
+    keyPress = (event) => {
+        const code = event.keyCode ? event.keyCode : event.which;
+
+        // if the escape key is pressed
+        if (code === 27) {
+            const { isOpen, closeOverlay } = this.props;
+            const { overlayState } = this.state;
+            if (isOpen) {
+                closeOverlay();
+            }
+        }
+    };
+
     componentDidUpdate() {
-        const { overlayState } = this.state;
-        const that = this;
+        const { overlayState, initiator } = this.state;
         if (overlayState === STATES.OPENING) {
+            const node = this.ref.current;
+            updateFocus(node);
+
             setTimeout(() => {
                 this.setState({
                     overlayState: STATES.OPEN,
@@ -71,6 +91,7 @@ class RootComponent extends Component {
             }, 1000);
         }
         if (overlayState === STATES.CLOSING) {
+            updateFocus(initiator);
             setTimeout(() => {
                 this.setState(
                     {
@@ -84,8 +105,18 @@ class RootComponent extends Component {
 
     render() {
         const { children, isOpen, closeOverlay, configs = {} } = this.props;
-        const { animate, top, contentClass } = configs;
+        const {
+            animate,
+            top,
+            contentClass,
+            clickDismiss = true,
+            escapeDismiss = true,
+            focusOutline = true,
+        } = configs;
         const { overlayState, prevState } = this.state;
+
+        console.log(document.activeElement);
+
         const className = [
             styles["overlay-wrapper"],
             styles["react-overlay"],
@@ -97,11 +128,29 @@ class RootComponent extends Component {
         ]
             .filter(Boolean)
             .join(" ");
+
+        const attrs = {
+            className,
+            onKeyPress: escapeDismiss ? (e) => this.keyPress(e) : undefined,
+            onKeyDown: escapeDismiss ? (e) => this.keyPress(e) : undefined,
+        };
+
+        const contentAttrs = {
+            className: [styles["overlay-content"], focusOutline ? styles["with-outline"] : ""]
+                .filter(Boolean)
+                .join(" "),
+            [focusOutline ? "tabIndex" : ""]: 0,
+        };
+
         return (
-            <div className={className}>
+            <div {...attrs}>
                 <>
-                    <BackDrop overlayState={overlayState} />
-                    <div className={contentClass || styles["overlay-content"]}>
+                    <BackDrop
+                        overlayState={overlayState}
+                        clickDismiss={clickDismiss}
+                        closeOverlay={closeOverlay}
+                    />
+                    <div ref={this.ref} {...contentAttrs}>
                         {closeOverlay ? (
                             <div
                                 className={styles["overlay-close"]}
