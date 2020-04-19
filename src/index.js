@@ -172,6 +172,7 @@ RootComponent.propTypes = {
     children: PropTypes.any,
     configs: PropTypes.object,
     closeOverlay: PropTypes.func,
+    showCloseIcon: PropTypes.bool,
 };
 
 export default RootComponent;

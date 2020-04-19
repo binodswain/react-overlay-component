@@ -30,5 +30,6 @@ backdrop.propTypes = {
     overlayState: PropTypes.string.isRequired,
     clickDismiss: PropTypes.bool,
     closeOverlay: PropTypes.func,
+    children: PropTypes.element,
 };
 export default backdrop;
