@@ -12,6 +12,8 @@ export const STATES = {
     CLOSING: "CLOSING",
 };
 
+const DFAULT_TIMEOUT = 700;
+
 const updateDom = (flag) => {
     const html = document.getElementsByTagName("body")[0];
     if (flag) {
@@ -89,7 +91,7 @@ class RootComponent extends Component {
                 this.setState({
                     overlayState: STATES.OPEN,
                 });
-            }, 1000);
+            }, DFAULT_TIMEOUT);
         }
         if (overlayState === STATES.CLOSING) {
             updateFocus(initiator);
@@ -98,7 +100,7 @@ class RootComponent extends Component {
                 this.setState({
                     overlayState: STATES.CLOSED,
                 });
-            }, 1000);
+            }, DFAULT_TIMEOUT);
         }
     }
 
@@ -117,11 +119,11 @@ class RootComponent extends Component {
         const className = [
             styles["overlay-wrapper"],
             styles["react-overlay"],
-            overlayState === STATES.HIDDEN ? styles["react-hidden"] : "",
-            overlayState === STATES.OPEN ? styles["react-open"] : "",
-            overlayState === STATES.OPENING ? styles["react-opening"] : "",
-            overlayState === STATES.CLOSING ? styles["react-closing"] : "",
-            overlayState === STATES.CLOSED ? styles["react-closed"] : "",
+            overlayState === STATES.HIDDEN ? styles["overlay-hidden"] : "",
+            overlayState === STATES.OPEN ? styles["overlay-open"] : "",
+            overlayState === STATES.OPENING ? styles["overlay-opening"] : "",
+            overlayState === STATES.CLOSING ? styles["overlay-closing"] : "",
+            overlayState === STATES.CLOSED ? styles["overlay-closed"] : "",
         ]
             .filter(Boolean)
             .join(" ");
@@ -136,6 +138,7 @@ class RootComponent extends Component {
             className: [
                 showCloseIcon ? styles["overlay-content"] : "",
                 focusOutline ? styles["with-outline"] : "",
+                contentClass || "",
             ]
                 .filter(Boolean)
                 .join(" "),
