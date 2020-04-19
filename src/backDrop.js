@@ -10,8 +10,19 @@ const backdrop = (props) => {
     return (
         <div
             className={styles["backdrop"]}
-            onClick={clickDismiss && !inTransition ? () => closeOverlay() : undefined}
-        ></div>
+            data-comp="backdrop"
+            onClick={
+                clickDismiss && !inTransition
+                    ? (e) => {
+                        if (e.target.dataset && e.target.dataset.comp === "backdrop") {
+                            closeOverlay();
+                        }
+                    }
+                    : undefined
+            }
+        >
+            {props.children}
+        </div>
     );
 };
 
