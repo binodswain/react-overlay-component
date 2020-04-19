@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BackDrop from "./backDrop";
 import PropTypes from "prop-types";
 import styles from "./styles.scss";
+import CloseIcon from "./assets/close.svg";
 
 export const STATES = {
     OPEN: "OPEN",
@@ -14,9 +15,9 @@ export const STATES = {
 const updateDom = (flag) => {
     const html = document.getElementsByTagName("body")[0];
     if (flag) {
-        html.classList.add("scroll-lock");
+        html.classList.add(styles["scroll-lock"]);
     } else {
-        html.classList.remove("scroll-lock");
+        html.classList.remove(styles["scroll-lock"]);
     }
 };
 
@@ -92,26 +93,24 @@ class RootComponent extends Component {
         }
         if (overlayState === STATES.CLOSING) {
             updateFocus(initiator);
+            updateDom(false);
             setTimeout(() => {
-                this.setState(
-                    {
-                        overlayState: STATES.CLOSED,
-                    },
-                    () => updateDom(false),
-                );
+                this.setState({
+                    overlayState: STATES.CLOSED,
+                });
             }, 1000);
         }
     }
 
     render() {
-        const { children, isOpen, closeOverlay, configs = {} } = this.props;
+        const { children, isOpen, closeOverlay, showCloseIcon = true, configs = {} } = this.props;
         const {
             animate,
             top,
             contentClass,
             clickDismiss = true,
             escapeDismiss = true,
-            focusOutline = true,
+            focusOutline = false,
         } = configs;
         const { overlayState, prevState } = this.state;
 
@@ -134,7 +133,10 @@ class RootComponent extends Component {
         };
 
         const contentAttrs = {
-            className: [styles["overlay-content"], focusOutline ? styles["with-outline"] : ""]
+            className: [
+                showCloseIcon ? styles["overlay-content"] : "",
+                focusOutline ? styles["with-outline"] : "",
+            ]
                 .filter(Boolean)
                 .join(" "),
             [focusOutline ? "tabIndex" : ""]: 0,
@@ -142,24 +144,24 @@ class RootComponent extends Component {
 
         return (
             <div {...attrs}>
-                <>
-                    <BackDrop
-                        overlayState={overlayState}
-                        clickDismiss={clickDismiss}
-                        closeOverlay={closeOverlay}
-                    />
+                <BackDrop
+                    overlayState={overlayState}
+                    clickDismiss={clickDismiss}
+                    closeOverlay={closeOverlay}
+                >
                     <div ref={this.ref} {...contentAttrs}>
-                        {closeOverlay ? (
+                        {closeOverlay && showCloseIcon ? (
                             <div
                                 className={styles["overlay-close"]}
                                 role="button"
                                 onClick={closeOverlay}
-                            ></div>
+                                dangerouslySetInnerHTML={{ __html: CloseIcon }}
+                            />
                         ) : null}
 
                         {children}
                     </div>
-                </>
+                </BackDrop>
             </div>
         );
     }
@@ -170,6 +172,7 @@ RootComponent.propTypes = {
     children: PropTypes.any,
     configs: PropTypes.object,
     closeOverlay: PropTypes.func,
+    showCloseIcon: PropTypes.bool,
 };
 
 export default RootComponent;

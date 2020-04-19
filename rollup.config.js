@@ -5,6 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
+import svg from "rollup-plugin-svg";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -23,6 +24,7 @@ export default {
         },
     ],
     plugins: [
+        svg(),
         peerDepsExternal(),
         babel(),
         postcss({
