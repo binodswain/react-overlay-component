@@ -14,15 +14,25 @@ export const STATES = {
 
 const DFAULT_TIMEOUT = 700;
 
+/**
+ * Updates classlist of body with scroll-lock class depending on flag val
+ * if true, adds classlist
+ * else removes the class
+ * @param {Boolean} flag
+ */
 const updateDom = (flag) => {
-    const html = document.getElementsByTagName("body")[0];
+    const body = document.getElementsByTagName("body")[0];
     if (flag) {
-        html.classList.add(styles["scroll-lock"]);
+        body.classList.add(styles["scroll-lock"]);
     } else {
-        html.classList.remove(styles["scroll-lock"]);
+        body.classList.remove(styles["scroll-lock"]);
     }
 };
 
+/**
+ * Focuses the element passed as param
+ * @param {Element} el
+ */
 const updateFocus = (el) => el && el.focus();
 
 class RootComponent extends Component {
@@ -36,6 +46,10 @@ class RootComponent extends Component {
         this.ref = React.createRef();
     }
 
+    /**
+     * This function class returns next state value based on isOpen value
+     * if the prevState and isOpen are same, state update is not required.
+     */
     static getDerivedStateFromProps(props, state) {
         const { isOpen, configs: { animate } = {} } = props;
         const { prevState } = state;
@@ -59,6 +73,11 @@ class RootComponent extends Component {
         }
     }
 
+    /**
+     * Handles escape key press
+     * if the overlay is open, then triggers close function
+     * @param {KeyboardEvent} event
+     */
     keyPress = (event) => {
         const code = event.keyCode ? event.keyCode : event.which;
 
@@ -72,25 +91,52 @@ class RootComponent extends Component {
         }
     };
 
+    /**
+     * Shifts focus to content div inside backdrop
+     */
+    shiftFocusToOverlay = () => {
+        const node = this.ref.current;
+        updateFocus(node);
+    };
+
+    /**
+     * shifts focus to the initiating element i.e last active element
+     * before overlay opened.
+     * And remove the scroll-lock class from body classList
+     * @param {JSX.Element} initiator
+     */
+    shiftFocusToEle = (initiator) => {
+        updateFocus(initiator);
+        updateDom(false);
+    };
+
+    /**
+     * This lifecycle method updates the overlayDate to final
+     * (from transition mode) if animate is true.
+     * Otherwise just shifts focus to respective element based on overlayState
+     */
     componentDidUpdate() {
         const { animate } = this.props.configs || {};
+        const { overlayState, initiator } = this.state;
+
         if (!animate) {
+            if (overlayState === STATES.OPEN) {
+                this.shiftFocusToOverlay();
+            } else {
+                this.shiftFocusToEle(initiator);
+            }
             return;
         }
 
-        const { overlayState, initiator } = this.state;
-
         if (overlayState === STATES.OPENING) {
-            const node = this.ref.current;
-            updateFocus(node);
+            this.shiftFocusToOverlay();
             setTimeout(() => {
                 this.setState({
                     overlayState: STATES.OPEN,
                 });
             }, DFAULT_TIMEOUT);
         } else if (overlayState === STATES.CLOSING) {
-            updateFocus(initiator);
-            updateDom(false);
+            this.shiftFocusToEle(initiator);
             setTimeout(() => {
                 this.setState({
                     overlayState: STATES.CLOSED,
