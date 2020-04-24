@@ -1,15 +1,18 @@
+$duration: 0.6s;
+$top: 0;
+
 .overlay-wrapper {
-    top: 0;
+    top: var(--top, $top);
     bottom: 0;
     left: 0;
     right: 0;
     position: fixed;
     overflow: auto;
+    display: flex;
     transition: opacity 0.85s;
-    opacity: 1;
 
     .backdrop {
-        top: 0;
+        top: var(--top, $top);
         bottom: 0;
         left: 0;
         right: 0;
@@ -48,27 +51,43 @@
         }
     }
 
-    &.react-overlay {
-        &.overlay-open {
-            // opacity: 1;
-        }
+    &.overlay-open {
+        opacity: 1;
+    }
 
-        &.overlay-opening {
-            // opacity: 1;
-        }
+    &.overlay-opening {
+        animation: fadeIn $duration;
+    }
 
-        &.overlay-closed,
-        &.overlay-hidden {
-            display: none;
-            opacity: 0;
-        }
+    &.overlay-closed,
+    &.overlay-hidden {
+        display: none;
+        opacity: 0;
+    }
 
-        &.overlay-closing {
-            opacity: 0;
-        }
+    &.overlay-closing {
+        opacity: 0;
     }
 }
 
 .scroll-lock {
     overflow: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

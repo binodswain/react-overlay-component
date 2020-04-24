@@ -1,6 +1,6 @@
 {
     "name": "react-overlay-component",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "description": "Sample React package to build npm packages",

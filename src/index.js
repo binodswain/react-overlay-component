@@ -35,34 +35,25 @@ class RootComponent extends Component {
         };
         this.ref = React.createRef();
     }
-    setOverlayState = (val) => {
-        this.setState({
-            overlayState: val,
-        });
-    };
-
-    setPrevState = (val) => {
-        this.setState({
-            prevState: val,
-        });
-    };
 
     static getDerivedStateFromProps(props, state) {
-        const { isOpen } = props;
+        const { isOpen, configs: { animate } = {} } = props;
         const { prevState } = state;
+
         if (isOpen === prevState) {
             return null;
         }
+
         if (isOpen) {
             updateDom(true);
             return {
-                overlayState: STATES.OPENING,
+                overlayState: !animate ? STATES.OPEN : STATES.OPENING,
                 prevState: isOpen,
                 initiator: document.activeElement,
             };
         } else {
             return {
-                overlayState: STATES.CLOSING,
+                overlayState: !animate ? STATES.CLOSED : STATES.CLOSING,
                 prevState: isOpen,
             };
         }
@@ -74,7 +65,7 @@ class RootComponent extends Component {
         // if the escape key is pressed
         if (code === 27) {
             const { isOpen, closeOverlay } = this.props;
-            const { overlayState } = this.state;
+            // const { overlayState } = this.state;
             if (isOpen) {
                 closeOverlay();
             }
@@ -82,18 +73,22 @@ class RootComponent extends Component {
     };
 
     componentDidUpdate() {
+        const { animate } = this.props.configs || {};
+        if (!animate) {
+            return;
+        }
+
         const { overlayState, initiator } = this.state;
+
         if (overlayState === STATES.OPENING) {
             const node = this.ref.current;
             updateFocus(node);
-
             setTimeout(() => {
                 this.setState({
                     overlayState: STATES.OPEN,
                 });
             }, DFAULT_TIMEOUT);
-        }
-        if (overlayState === STATES.CLOSING) {
+        } else if (overlayState === STATES.CLOSING) {
             updateFocus(initiator);
             updateDom(false);
             setTimeout(() => {
@@ -114,11 +109,10 @@ class RootComponent extends Component {
             escapeDismiss = true,
             focusOutline = false,
         } = configs;
-        const { overlayState, prevState } = this.state;
+        const { overlayState } = this.state;
 
         const className = [
             styles["overlay-wrapper"],
-            styles["react-overlay"],
             overlayState === STATES.HIDDEN ? styles["overlay-hidden"] : "",
             overlayState === STATES.OPEN ? styles["overlay-open"] : "",
             overlayState === STATES.OPENING ? styles["overlay-opening"] : "",
@@ -145,8 +139,12 @@ class RootComponent extends Component {
             [focusOutline ? "tabIndex" : ""]: 0,
         };
 
+        const style = {
+            "--top": top,
+        };
+
         return (
-            <div {...attrs}>
+            <div {...attrs} style={style}>
                 <BackDrop
                     overlayState={overlayState}
                     clickDismiss={clickDismiss}

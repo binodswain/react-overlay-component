@@ -11,13 +11,12 @@ function App() {
 
     const configs = {
         animate: false,
-        top: 65,
         contentClass: "container overlay-content",
     };
 
     const configs1 = {
-        animate: false,
-        top: 65,
+        animate: true,
+        top: `5em`,
         clickDismiss: false,
         escapeDismiss: false,
         focusOutline: true,
@@ -54,19 +53,6 @@ function App() {
                 cursus lorem vel semper dapibus. Praesent viverra mauris maximus ex laoreet mattis.
                 Maecenas a interdum mauris. Mauris molestie, odio eget rhoncus molestie, ex odio
                 condimentum enim, et vehicula sem quam non odio.
-            </p>
-            <p>
-                Fusce urna eros, feugiat et magna molestie, pulvinar mattis tellus. Nunc auctor nibh
-                blandit auctor venenatis. Cras eget vestibulum augue, quis convallis nulla. Aliquam
-                erat volutpat. Morbi sapien metus, convallis sed sapien in, placerat gravida risus.
-                Duis at tincidunt nulla. In lorem urna, tristique quis nisi non, pretium vehicula
-                dui. Vivamus ultricies ac velit quis fermentum. Ut id quam in mauris lacinia
-                egestas. Vivamus luctus ut lectus sit amet fringilla. Donec et libero bibendum,
-                commodo quam sit amet, iaculis urna. Phasellus semper massa semper dictum
-                consectetur. Duis metus sapien, dignissim id sem id, elementum egestas neque.
-                Integer malesuada nulla non auctor pharetra. Aliquam fringilla rutrum orci, ac
-                euismod lacus scelerisque sed. Duis imperdiet, mauris ac facilisis finibus, ligula
-                metus commodo ex, egestas ullamcorper magna felis ut odio.
             </p>
 
             <button
@@ -215,6 +201,7 @@ function App() {
                 et netus et malesuada fames ac turpis egestas. Vivamus vestibulum aliquet augue, vel
                 mattis lorem efficitur sed. Phasellus in pulvinar neque.
             </p>
+        
         </div>
     );
 }
