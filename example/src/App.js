@@ -19,6 +19,7 @@ function App() {
         clickDismiss: false,
         escapeDismiss: false,
         focusOutline: true,
+        showCloseIcon: false,
     };
 
     return (
@@ -200,7 +201,6 @@ function App() {
                 et netus et malesuada fames ac turpis egestas. Vivamus vestibulum aliquet augue, vel
                 mattis lorem efficitur sed. Phasellus in pulvinar neque.
             </p>
-        
         </div>
     );
 }
