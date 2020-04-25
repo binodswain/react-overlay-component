@@ -1,5 +1,7 @@
+[![open-issues](https://badgen.net/github/open-issues/binodswain/react-overlay-component)](https://github.com/binodswain/react-overlay-component/issues)
 [![Test Status](https://github.com/binodswain/react-overlay-component/workflows/Test/badge.svg)](https://github.com/binodswain/react-overlay-component/actions?query=workflow%3ATest)
 [![Build Status](https://github.com/binodswain/react-overlay-component/workflows/Build/badge.svg)](https://github.com/binodswain/react-overlay-component/actions?query=workflow%3ABuild)
+[![license](https://badgen.net/github/license/binodswain/react-overlay-component)](https://github.com/binodswain/react-overlay-component/blob/master/LICENSE)
 
 # react-overlay-component
 
