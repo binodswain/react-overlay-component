@@ -1,3 +1,4 @@
+[![release](https://badgen.net/npm/v/react-overlay-component)](https://www.npmjs.com/package/react-overlay-component)
 [![open-issues](https://badgen.net/github/open-issues/binodswain/react-overlay-component)](https://github.com/binodswain/react-overlay-component/issues)
 [![Test Status](https://github.com/binodswain/react-overlay-component/workflows/Test/badge.svg)](https://github.com/binodswain/react-overlay-component/actions?query=workflow%3ATest)
 [![Build Status](https://github.com/binodswain/react-overlay-component/workflows/Build/badge.svg)](https://github.com/binodswain/react-overlay-component/actions?query=workflow%3ABuild)
@@ -64,7 +65,7 @@ function App() {
 
 ## Demo
 
-View demos:
+View demos: https://binodswain.github.io/react-overlay-component/
 
 or
 
