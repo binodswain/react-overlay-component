@@ -153,7 +153,7 @@ class RootComponent extends Component {
     };
 
     render() {
-        const { children, isOpen, closeOverlay, showCloseIcon = true, configs = {} } = this.props;
+        const { children, isOpen, closeOverlay, configs = {} } = this.props;
         const {
             animate,
             top = 0,
@@ -161,6 +161,7 @@ class RootComponent extends Component {
             clickDismiss = true,
             escapeDismiss = true,
             focusOutline = false,
+            showCloseIcon = true,
         } = configs;
         const { overlayState } = this.state;
 
@@ -183,7 +184,7 @@ class RootComponent extends Component {
 
         const contentAttrs = {
             className: [
-                showCloseIcon ? styles["overlay-content"] : "",
+                styles["overlay-content"],
                 focusOutline ? styles["with-outline"] : "",
                 contentClass,
             ]
