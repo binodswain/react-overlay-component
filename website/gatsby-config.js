@@ -1,7 +1,7 @@
 module.exports = {
-  pathPrefix: "/react-lib-template",
+  pathPrefix: "/react-overlay-component",
   siteMetadata: {
-    title: `react-lib-template`,
+    title: `react-overlay-component`,
     description: `React package`,
     author: `@swain_binod`,
   },
