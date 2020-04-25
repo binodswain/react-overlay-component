@@ -51,7 +51,7 @@ class RootComponent extends Component {
      * if the prevState and isOpen are same, state update is not required.
      */
     static getDerivedStateFromProps(props, state) {
-        const { isOpen, configs: { animate } = {} } = props;
+        const { isOpen, configs: { animate = true } = {} } = props;
         const { prevState } = state;
 
         if (isOpen === prevState) {
@@ -116,7 +116,7 @@ class RootComponent extends Component {
      * Otherwise just shifts focus to respective element based on overlayState
      */
     componentDidUpdate() {
-        const { animate } = this.props.configs || {};
+        const { animate = true } = this.props.configs || {};
         const { overlayState, initiator } = this.state;
 
         if (!animate) {
@@ -145,12 +145,19 @@ class RootComponent extends Component {
         }
     }
 
+    handleCloseOverlay = (e) => {
+        e.preventDefault();
+        if (this.props.closeOverlay) {
+            this.props.closeOverlay();
+        }
+    };
+
     render() {
         const { children, isOpen, closeOverlay, showCloseIcon = true, configs = {} } = this.props;
         const {
             animate,
-            top,
-            contentClass,
+            top = 0,
+            contentClass = "",
             clickDismiss = true,
             escapeDismiss = true,
             focusOutline = false,
@@ -178,11 +185,11 @@ class RootComponent extends Component {
             className: [
                 showCloseIcon ? styles["overlay-content"] : "",
                 focusOutline ? styles["with-outline"] : "",
-                contentClass || "",
+                contentClass,
             ]
                 .filter(Boolean)
                 .join(" "),
-            [focusOutline ? "tabIndex" : ""]: 0,
+            tabIndex: 0,
         };
 
         const style = {
@@ -201,7 +208,10 @@ class RootComponent extends Component {
                             <div
                                 className={styles["overlay-close"]}
                                 role="button"
+                                tabIndex="0"
                                 onClick={closeOverlay}
+                                onKeyPress={this.handleCloseOverlay}
+                                // onKeyDown={closeOverlay}
                                 dangerouslySetInnerHTML={{ __html: CloseIcon }}
                             />
                         ) : null}

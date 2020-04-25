@@ -10,13 +10,12 @@ function App() {
     const closeOverlay1 = () => setOverlay1(false);
 
     const configs = {
-        animate: false,
         contentClass: "container overlay-content",
     };
 
     const configs1 = {
         animate: true,
-        top: `5em`,
+        // top: `5em`,
         clickDismiss: false,
         escapeDismiss: false,
         focusOutline: true,
