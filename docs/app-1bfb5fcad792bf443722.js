@@ -2,12 +2,13 @@
     [3],
     {
         "+ZDr": function (t, e, n) {
+            
             n("n7j8"), n("OeI1"), n("JHok"), n("sC2a");
             const r = n("TqRt");
             (e.__esModule = !0),
             (e.withPrefix = d),
             (e.withAssetPrefix = function (t) {
-                return [""].concat([t.replace(/^\//, "")]).join("/");
+                return ["/react-overlay-component"].concat([t.replace(/^\//, "")]).join("/");
             }),
             (e.navigateTo = e.replace = e.push = e.navigate = e.default = void 0);
             const o = r(n("8OQS")),
@@ -22,7 +23,7 @@
             function d(t) {
                 return (function (t) {
                     return t.replace(/\/+/g, "/");
-                })(["", t].join("/"));
+                })(["/react-overlay-component", t].join("/"));
             }
             e.parsePath = p.parsePath;
             const h = {
@@ -205,6 +206,7 @@
             };
         },
         "+i7v": function (t, e, n) {
+            
             const r = n("TqRt");
             (e.__esModule = !0),
             (e.default = function (t, e) {
@@ -293,6 +295,7 @@
             };
         },
         "16Xr": function (t, e, n) {
+            
             const r = n("nONw"),
                 o = n("BjK0"),
                 i = n("+wZX"),
@@ -340,6 +343,7 @@
             });
         },
         "1fHE": function (t, e, n) {
+            
             (e.__esModule = !0), (e.default = void 0);
             const r = (function () {
                 function t() {}
@@ -391,6 +395,7 @@
             t.exports = n("4dA+")("native-function-to-string", Function.toString);
         },
         "444f": function (t, e, n) {
+            
             const r = n("TqRt");
             (e.__esModule = !0), (e.default = void 0);
             const o = r(n("PJYZ")),
@@ -473,6 +478,7 @@
             e.default = v;
         },
         "4DPX": function (t, e, n) {
+            
             var r = n("emib"),
                 o = n("qDzq"),
                 i = n("QPJK"),
@@ -721,6 +727,7 @@
             };
         },
         "5yr3": function (t, e, n) {
+            
             n("AqHK"), n("sc67"), n("pS08");
             const r = (function (t) {
                 return (
@@ -746,10 +753,12 @@
             e.a = r;
         },
         "6DQo": function (t, e, n) {
+            
             n("sC2a");
             t.exports = function () {};
         },
         "6PSD": function (t, e, n) {
+            
             const r = n("rjfK").f,
                 o = n("nsRs"),
                 i = n("rj/q"),
@@ -871,6 +880,7 @@
             };
         },
         "6kNP": function (t, e, n) {
+            
             var r,
                 o,
                 i,
@@ -1131,12 +1141,14 @@
             );
         },
         "7hJ6": function (t, e, n) {
+            
             const r = n("TqRt"),
                 o = r(n("444f")),
                 i = r(n("IVHb"));
             (e.ScrollContainer = i.default), (e.ScrollContext = o.default);
         },
         "83Ih": function (t, e, n) {
+            
             n("AqcI");
             const r = n("IYdN"),
                 o = n("8wc8"),
@@ -1231,6 +1243,7 @@
             };
         },
         "8Y+z": function (t, e, n) {
+            
             (e.__esModule = !0),
             (e.default = function (t) {
                 return t === t.window
@@ -1240,6 +1253,7 @@
             (t.exports = e.default);
         },
         "8npG": function (t, e, n) {
+            
             const r = n("aHWV"),
                 o = {};
             (o[n("sOol")("toStringTag")] = "z"),
@@ -1287,6 +1301,7 @@
             };
         },
         "94Pd": function (t, e, n) {
+            
             const r = n("emib"),
                 o = n("P8UN"),
                 i = n("IYdN"),
@@ -1395,6 +1410,7 @@
             };
         },
         "9Xx/": function (t, e, n) {
+            
             n.r(e),
             n.d(e, "globalHistory", function () {
                 return u;
@@ -1594,6 +1610,7 @@
             };
         },
         AqHK: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("Wadk")(1);
             r(r.P + r.F * !n("h/qr")([].map, !0), "Array", {
@@ -1603,6 +1620,7 @@
             });
         },
         AqcI: function (t, e, n) {
+            
             const r = n("veur");
             n("P8UN")({ target: "RegExp", proto: !0, forced: r !== /./.exec }, { exec: r });
         },
@@ -1632,6 +1650,7 @@
             e.f = {}.propertyIsEnumerable;
         },
         Bp9Y: function (t, e, n) {
+            
             (e.__esModule = !0), (e.default = void 0);
             const r = !(
                 "undefined" == typeof window ||
@@ -1665,6 +1684,7 @@
             };
         },
         "Dq+y": function (t, e, n) {
+            
             const r = n("Dq1/"),
                 o = n("xlXC"),
                 i = n("m+kh"),
@@ -1721,6 +1741,7 @@
             r(r.S + r.F, "Object", { assign: n("k5Iv") });
         },
         Fgx0: function (t, e, n) {
+            
             const r = n("rjfK"),
                 o = n("pSXQ");
             t.exports = function (t, e, n) {
@@ -1768,6 +1789,7 @@
             });
         },
         HQhv: function (t, e, n) {
+            
             const r = n("mhTz"),
                 o = n("1a8y"),
                 i = n("Ioy3"),
@@ -1878,6 +1900,7 @@
             });
         },
         IOVJ: function (t, e, n) {
+            
             n("E5k/");
             const r = n("q1tI"),
                 o = n.n(r),
@@ -1923,6 +1946,7 @@
             e.a = c;
         },
         IVHb: function (t, e, n) {
+            
             const r = n("TqRt");
             (e.__esModule = !0), (e.default = void 0);
             const o = r(n("PJYZ")),
@@ -2020,6 +2044,7 @@
             };
         },
         JHok: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("Wadk")(0),
                 i = n("h/qr")([].forEach, !0);
@@ -2058,6 +2083,7 @@
                 n("rjfK").f(RegExp.prototype, "flags", { configurable: !0, get: n("lb9j") });
         },
         LHMV: function (t, e, n) {
+            
             n("MIFh"),
             n("rzGZ"),
             n("Dq+y"),
@@ -2273,8 +2299,7 @@
                     }),
                     (e.scrollToTarget = function (t, e) {
                         if ("string" == typeof e) {
-                            const n =
-                                document.getElementById(e) || document.getElementsByName(e)[0];
+                            const n = document.getElementById(e) || document.getElementsByName(e)[0];
                             if (n) return void n.scrollIntoView();
                             e = [0, 0];
                         }
@@ -2289,6 +2314,7 @@
             (e.default = l), (t.exports = e.default);
         },
         LYrO: function (t, e, n) {
+            
             n.d(e, "f", function () {
                 return i;
             }),
@@ -2479,6 +2505,7 @@
             t.exports = [{ plugin: n("GddB"), options: { plugins: [] } }];
         },
         Ll4R: function (t, e, n) {
+            
             const r = n("1a8y"),
                 o = n("kiRH"),
                 i = n("fhoV"),
@@ -2542,6 +2569,7 @@
             })());
         },
         MgzW: function (t, e, n) {
+            
             n("rzGZ"),
             n("Dq+y"),
             n("8npG"),
@@ -2644,6 +2672,7 @@
                 });
         },
         NSX3: function (t, e, n) {
+            
             n.r(e);
             const r = n("xtsi");
             "https:" !== window.location.protocol && "localhost" !== window.location.hostname
@@ -2652,7 +2681,7 @@
                 )
                 : "serviceWorker" in navigator &&
                   navigator.serviceWorker
-                      .register("/sw.js")
+                      .register("/react-overlay-component/sw.js")
                       .then(function (t) {
                           t.addEventListener("updatefound", function () {
                               Object(r.apiRunner)("onServiceWorkerUpdateFound", {
@@ -2665,12 +2694,11 @@
                                       case "installed":
                                           navigator.serviceWorker.controller
                                               ? ((window.___swUpdated = !0),
-                                              Object(r.apiRunner)(
-                                                  "onServiceWorkerUpdateReady",
-                                                  {
-                                                      serviceWorker: t,
-                                                  },
-                                              ),
+                                              Object(
+                                                  r.apiRunner,
+                                              )("onServiceWorkerUpdateReady", {
+                                                  serviceWorker: t,
+                                              }),
                                               window.___failedResources &&
                                                         (console.log(
                                                             "resources failed, SW updated - reloading",
@@ -2713,6 +2741,7 @@
             };
         },
         OeI1: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("Wadk")(2);
             r(r.P + r.F * !n("h/qr")([].filter, !0), "Array", {
@@ -2722,6 +2751,7 @@
             });
         },
         OysZ: function (t, e, n) {
+            
             (e.__esModule = !0),
             (e.isMobileSafari = function () {
                 return (
@@ -2789,6 +2819,7 @@
             e.f = n("sOol");
         },
         QLaP: function (t, e, n) {
+            
             n("pJf4"), n("sC2a");
             t.exports = function (t, e, n, r, o, i, a, c) {
                 if (!t) {
@@ -2909,6 +2940,7 @@
             (t.exports = { set: p, clear: d });
         },
         ToIb: function (t, e, n) {
+            
             const r = n("6PSD"),
                 o = n("O1i0");
             t.exports = n("94Pd")(
@@ -2945,6 +2977,7 @@
             );
         },
         U6Bt: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("/+AL");
             r(r.P + r.F * !n("h/qr")([].reduce, !0), "Array", {
@@ -2969,6 +3002,7 @@
             };
         },
         UxWs: function (t, e, n) {
+            
             n.r(e);
             n("sPse"), n("Ll4R"), n("E5k/");
             const r = n("xtsi"),
@@ -3265,7 +3299,7 @@
                                             i.a.createElement(
                                                 u.Router,
                                                 {
-                                                    basepath: "",
+                                                    basepath: "/react-overlay-component",
                                                     location: o,
                                                     id: "gatsby-focus-wrapper",
                                                 },
@@ -3277,7 +3311,7 @@
                                                                     "/404.html" === r.page.path
                                                                         ? Object(L.a)(
                                                                             o.pathname,
-                                                                            "",
+                                                                            "/react-overlay-component",
                                                                         )
                                                                         : encodeURI(
                                                                             r.page.matchPath ||
@@ -3301,14 +3335,16 @@
                     a = o.pagePath,
                     l = o.location;
                 a &&
-                        "" + a !== l.pathname &&
+                        "/react-overlay-component" + a !== l.pathname &&
                         !(
-                            U.findMatchPath(Object(L.a)(l.pathname, "")) ||
+                            U.findMatchPath(Object(L.a)(l.pathname, "/react-overlay-component")) ||
                             "/404.html" === a ||
                             a.match(/^\/404\/?$/) ||
                             a.match(/^\/offline-plugin-app-shell-fallback\/?$/)
                         ) &&
-                        Object(u.navigate)("" + a + l.search + l.hash, { replace: !0 }),
+                        Object(u.navigate)("/react-overlay-component" + a + l.search + l.hash, {
+                            replace: !0,
+                        }),
                 p.publicLoader.loadPage(l.pathname).then(function (t) {
                     if (!t || t.status === p.PageResourceStatus.Error)
                         throw new Error(
@@ -3415,6 +3451,7 @@
             };
         },
         WevN: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("kiRH"),
                 i = n("YdGP"),
@@ -3431,6 +3468,7 @@
             });
         },
         WfYH: function (t, e, n) {
+            
             const r = n("nONw");
             function o(t) {
                 let e, n;
@@ -3446,6 +3484,7 @@
             };
         },
         YEpu: function (t, e, n) {
+            
             const r = n("aHWV"),
                 o = RegExp.prototype.exec;
             t.exports = function (t, e) {
@@ -3475,6 +3514,7 @@
             t.exports = JSON.parse("[]");
         },
         YbXK: function (t, e, n) {
+            
             const r = n("ouCZ")(!0);
             n("ZFV6")(
                 String,
@@ -3514,6 +3554,7 @@
                 };
         },
         YwZP: function (t, e, n) {
+            
             n.r(e),
             n.d(e, "Link", function () {
                 return T;
@@ -4103,6 +4144,7 @@
                 };
         },
         ZFV6: function (t, e, n) {
+            
             const r = n("939K"),
                 o = n("P8UN"),
                 i = n("IYdN"),
@@ -4169,6 +4211,7 @@
             };
         },
         ZfQF: function (t, e, n) {
+            
             const r = n("TqRt");
             (e.__esModule = !0),
             (e.default = function (t, e) {
@@ -4232,6 +4275,7 @@
             };
         },
         c0Fl: function (t, e, n) {
+            
             const r = n("TqRt");
             (e.__esModule = !0), (e.default = void 0);
             let o = function () {};
@@ -4249,6 +4293,7 @@
             (e.default = i), (t.exports = e.default);
         },
         cFtU: function (t, e, n) {
+            
             const r = n("ot9L"),
                 o = n("P8UN"),
                 i = n("DFzH"),
@@ -4292,6 +4337,7 @@
             );
         },
         cSJ8: function (t, e, n) {
+            
             e.a = function (t, e) {
                 return (
                     void 0 === e && (e = ""),
@@ -4309,6 +4355,7 @@
                 };
         },
         cu4x: function (t, e, n) {
+            
             n("sc67"),
             (e.__esModule = !0),
             (e.parsePath = function (t) {
@@ -4339,6 +4386,7 @@
             };
         },
         emEt: function (t, e, n) {
+            
             n.r(e),
             n.d(e, "PageResourceStatus", function () {
                 return _;
@@ -4471,7 +4519,7 @@
                 d = [],
                 h = function (t) {
                     const e = decodeURIComponent(t);
-                    return Object(u.a)(e, "").split("#")[0].split("?")[0];
+                    return Object(u.a)(e, "/react-overlay-component").split("#")[0].split("?")[0];
                 },
                 v = function (t) {
                     for (var e, n = m(t), r = l(d); !(e = r()).done; ) {
@@ -4530,7 +4578,7 @@
                 S = function (t) {
                     let e;
                     return (
-                        "/page-data/" +
+                        "/react-overlay-component/page-data/" +
                         ("/" === t
                             ? "index"
                             : (e = (e = "/" === (e = t)[0] ? e.slice(1) : e).endsWith("/")
@@ -4733,20 +4781,24 @@
                             const e = this;
                             return (
                                 void 0 === t && (t = 0),
-                                x("/page-data/app-data.json").then(function (n) {
-                                    let r,
-                                        o = n.status,
-                                        i = n.responseText;
-                                    if (200 !== o && t < 3) return e.loadAppData(t + 1);
-                                    if (200 === o)
-                                        try {
-                                            const a = JSON.parse(i);
-                                            if (void 0 === a.webpackCompilationHash)
-                                                throw new Error("not a valid app-data response");
-                                            r = a;
-                                        } catch (c) {}
-                                    return r;
-                                })
+                                x("/react-overlay-component/page-data/app-data.json").then(
+                                    function (n) {
+                                        let r,
+                                            o = n.status,
+                                            i = n.responseText;
+                                        if (200 !== o && t < 3) return e.loadAppData(t + 1);
+                                        if (200 === o)
+                                            try {
+                                                const a = JSON.parse(i);
+                                                if (void 0 === a.webpackCompilationHash)
+                                                    throw new Error(
+                                                        "not a valid app-data response",
+                                                    );
+                                                r = a;
+                                            } catch (c) {}
+                                        return r;
+                                    },
+                                )
                             );
                         }),
                         t
@@ -4754,7 +4806,7 @@
                 })(),
                 R = function (t) {
                     return (window.___chunkMapping[t] || []).map(function (t) {
-                        return "" + t;
+                        return "/react-overlay-component" + t;
                     });
                 },
                 k = (function (t) {
@@ -4868,6 +4920,7 @@
             "number" == typeof __g && (__g = n);
         },
         eoYm: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("YdGP");
             r(r.P + r.F * n("h+B4")("includes"), "String", {
@@ -4880,12 +4933,14 @@
             });
         },
         fhoV: function (t, e, n) {
+            
             const r = n("ouCZ")(!0);
             t.exports = function (t, e, n) {
                 return e + (n ? r(t, e).length : 1);
             };
         },
         "gu/5": function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("Ar2q")(!0);
             r(r.P, "Array", {
@@ -4910,6 +4965,7 @@
             };
         },
         "h/qr": function (t, e, n) {
+            
             const r = n("96qb");
             t.exports = function (t, e) {
                 return (
@@ -4972,6 +5028,7 @@
             };
         },
         k5Iv: function (t, e, n) {
+            
             const r = n("QPJK"),
                 o = n("2mBY"),
                 i = n("lHo0"),
@@ -5047,6 +5104,7 @@
             };
         },
         lb9j: function (t, e, n) {
+            
             const r = n("1a8y");
             t.exports = function () {
                 let t = r(this),
@@ -5290,6 +5348,7 @@
             t.exports = n;
         },
         "q5+k": function (t, e, n) {
+            
             n("wZFJ");
             const r = n("TqRt");
             (e.__esModule = !0), (e.default = void 0);
@@ -5326,6 +5385,7 @@
             (e.default = l), (t.exports = e.default);
         },
         q8oJ: function (t, e, n) {
+            
             n("Kz6e");
             const r = n("1a8y"),
                 o = n("lb9j"),
@@ -5357,6 +5417,7 @@
             };
         },
         raBC: function (t, e, n) {
+            
             const r = n("TqRt");
             (e.__esModule = !0), (e.default = void 0);
             let o = function () {};
@@ -5460,6 +5521,7 @@
             }
         },
         sC2a: function (t, e, n) {
+            
             const r = n("1a8y"),
                 o = n("DFzH"),
                 i = n("kiRH"),
@@ -5569,6 +5631,7 @@
             }).store = r;
         },
         sPse: function (t, e, n) {
+            
             const r = n("1a8y"),
                 o = n("+iOX"),
                 i = n("YEpu");
@@ -5593,6 +5656,7 @@
             });
         },
         sc67: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("Ar2q")(!1),
                 i = [].indexOf,
@@ -5604,6 +5668,7 @@
             });
         },
         "to/b": function (t, e, n) {
+            
             const r = n("emib"),
                 o = n("rjfK"),
                 i = n("QPJK"),
@@ -5630,6 +5695,7 @@
                 };
         },
         v0YV: function (t, e, n) {
+            
             const r = n("nsRs"),
                 o = n("pSXQ"),
                 i = n("dSuk"),
@@ -5671,6 +5737,7 @@
             };
         },
         veur: function (t, e, n) {
+            
             let r,
                 o,
                 i = n("lb9j"),
@@ -5712,6 +5779,7 @@
             t.exports = JSON.parse("[]");
         },
         wZFJ: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("Wadk")(3);
             r(r.P + r.F * !n("h/qr")([].some, !0), "Array", {
@@ -5737,6 +5805,7 @@
             };
         },
         xJgp: function (t, e, n) {
+            
             const r = n("6PSD"),
                 o = n("O1i0");
             t.exports = n("94Pd")(
@@ -5850,6 +5919,7 @@
             };
         },
         zGcK: function (t, e, n) {
+            
             const r = n("P8UN"),
                 o = n("nONw"),
                 i = n("DFzH"),
@@ -5877,4 +5947,4 @@
     },
     [["UxWs", 8, 7]],
 ]);
-//# sourceMappingURL=app-785a4965ea6aa0660126.js.map
+//# sourceMappingURL=app-1bfb5fcad792bf443722.js.map
