@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
-    "description": "Sample React package to build npm packages",
+    "description": "npm package to render overlay/modal with backdrop",
     "scripts": {
         "test": "jest --verbose ./test",
         "lint:js": "eslint src/*.js",
@@ -75,7 +75,13 @@
         "npm": ">=5"
     },
     "keywords": [
-        "react"
+        "react",
+        "modal",
+        "overlay",
+        "dialog",
+        "react-modal",
+        "react-overlay",
+        "react-overlay-component"
     ],
     "author": "“Binod <binodkumarswain94@gmail.com> (binodswain@github.io)",
     "license": "MIT",
