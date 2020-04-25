@@ -211,7 +211,6 @@ class RootComponent extends Component {
                                 tabIndex="0"
                                 onClick={closeOverlay}
                                 onKeyPress={this.handleCloseOverlay}
-                                // onKeyDown={closeOverlay}
                                 dangerouslySetInnerHTML={{ __html: CloseIcon }}
                             />
                         ) : null}
