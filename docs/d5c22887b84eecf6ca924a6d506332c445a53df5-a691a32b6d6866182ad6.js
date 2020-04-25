@@ -725,20 +725,20 @@
                                         t = this.props,
                                         n = t.children,
                                         r = (t.isOpen, t.closeOverlay),
-                                        a = t.showCloseIcon,
-                                        i = void 0 === a || a,
-                                        s = t.configs,
-                                        l = void 0 === s ? {} : s,
-                                        c = (l.animate, l.top),
-                                        f = void 0 === c ? 0 : c,
-                                        p = l.contentClass,
-                                        v = void 0 === p ? "" : p,
-                                        h = l.clickDismiss,
+                                        a = t.configs,
+                                        i = void 0 === a ? {} : a,
+                                        s = (i.animate, i.top),
+                                        l = void 0 === s ? 0 : s,
+                                        c = i.contentClass,
+                                        f = void 0 === c ? "" : c,
+                                        p = i.clickDismiss,
+                                        v = void 0 === p || p,
+                                        h = i.escapeDismiss,
                                         m = void 0 === h || h,
-                                        b = l.escapeDismiss,
-                                        _ = void 0 === b || b,
-                                        w = l.focusOutline,
-                                        k = void 0 !== w && w,
+                                        b = i.focusOutline,
+                                        _ = void 0 !== b && b,
+                                        w = i.showCloseIcon,
+                                        k = void 0 === w || w,
                                         x = this.state.overlayState,
                                         S = {
                                             className: [
@@ -751,12 +751,12 @@
                                             ]
                                                 .filter(Boolean)
                                                 .join(" "),
-                                            onKeyPress: _
+                                            onKeyPress: m
                                                 ? function (t) {
                                                     return e.keyPress(t);
                                                 }
                                                 : void 0,
-                                            onKeyDown: _
+                                            onKeyDown: m
                                                 ? function (t) {
                                                     return e.keyPress(t);
                                                 }
@@ -764,25 +764,25 @@
                                         },
                                         O = {
                                             className: [
-                                                i ? d["overlay-content"] : "",
-                                                k ? d["with-outline"] : "",
-                                                v,
+                                                d["overlay-content"],
+                                                _ ? d["with-outline"] : "",
+                                                f,
                                             ]
                                                 .filter(Boolean)
                                                 .join(" "),
                                             tabIndex: 0,
                                         },
-                                        P = { "--top": f };
+                                        P = { "--top": l };
                                     return o.a.createElement(
                                         "div",
                                         u({}, S, { style: P }),
                                         o.a.createElement(
                                             y,
-                                            { overlayState: x, clickDismiss: m, closeOverlay: r },
+                                            { overlayState: x, clickDismiss: v, closeOverlay: r },
                                             o.a.createElement(
                                                 "div",
                                                 u({ ref: this.ref }, O),
-                                                r && i
+                                                r && k
                                                     ? o.a.createElement("div", {
                                                         className: d["overlay-close"],
                                                         role: "button",
@@ -2042,4 +2042,4 @@
         },
     },
 ]);
-//# sourceMappingURL=d5c22887b84eecf6ca924a6d506332c445a53df5-6e8207ac4bc3f9bd0569.js.map
+//# sourceMappingURL=d5c22887b84eecf6ca924a6d506332c445a53df5-a691a32b6d6866182ad6.js.map
