@@ -22,10 +22,17 @@ const DFAULT_TIMEOUT = 500;
  */
 const updateDom = (flag) => {
     const body = document.getElementsByTagName("body")[0];
+    const scrollClass = styles["scroll-lock"];
+
     if (flag) {
-        body.classList.add(styles["scroll-lock"]);
+        if (!body.classList.contains(scrollClass)) {
+            body.classList.add(scrollClass);
+        }
     } else {
-        body.classList.remove(styles["scroll-lock"]);
+        // check if tracker has any other overlay open
+        if (!Object.values(RootComponent.tracker).filter(Boolean).length) {
+            body.classList.remove(scrollClass);
+        }
     }
 };
 
@@ -42,9 +49,26 @@ class RootComponent extends Component {
             overlayState: STATES.HIDDEN,
             prevState: props.isOpen,
             initiator: null,
+            overlayId: RootComponent.getNewOverlayId(),
         };
         this.ref = React.createRef();
     }
+
+    static tracker = {};
+    static trackerId = 0;
+
+    static getNewOverlayId() {
+        this.trackerId++;
+        return `overlay-${this.trackerId}`;
+    }
+
+    componentDidMount() {
+        this.updateOverlayTracker();
+    }
+
+    updateOverlayTracker = () => {
+        RootComponent.tracker[this.state.overlayId] = this.props.isOpen;
+    };
 
     /**
      * This function class returns next state value based on isOpen value
@@ -118,6 +142,8 @@ class RootComponent extends Component {
     componentDidUpdate() {
         const { animate = true } = this.props.configs || {};
         const { overlayState, initiator } = this.state;
+
+        this.updateOverlayTracker();
 
         if (!animate) {
             if (overlayState === STATES.OPEN) {
