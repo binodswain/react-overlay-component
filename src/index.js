@@ -12,7 +12,7 @@ export const STATES = {
     CLOSING: "CLOSING",
 };
 
-const DFAULT_TIMEOUT = 700;
+const DFAULT_TIMEOUT = 500;
 
 /**
  * Updates classlist of body with scroll-lock class depending on flag val

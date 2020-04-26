@@ -2,6 +2,7 @@ src
 example
 .babelrc
 webpack.config.js
+rollup.config.js
 .gitignore
 README.md
 node_modules/
@@ -10,5 +11,10 @@ docs
 __mock__
 test.js
 website
-dist
+.github
+.prettierignore
+.prettierrc
+.stylelintrc
 .vscode
+.eslintignore
+.eslintrc.json

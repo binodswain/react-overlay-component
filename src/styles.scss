@@ -1,4 +1,4 @@
-$duration: 0.6s;
+$duration: 0.5s;
 $top: 0;
 
 .overlay-wrapper {
@@ -9,7 +9,8 @@ $top: 0;
     position: fixed;
     overflow: auto;
     display: flex;
-    transition: opacity 0.85s;
+    transition: opacity $duration;
+    z-index: 999;
 
     .backdrop {
         top: var(--top, $top);
@@ -20,7 +21,6 @@ $top: 0;
         overflow: auto;
         display: flex;
         background-color: rgba(50, 50, 50, 0.88);
-        z-index: 1;
         padding: 2em 0;
     }
 
@@ -28,7 +28,6 @@ $top: 0;
         padding: 2em;
         background-color: white;
         max-width: 600px;
-        z-index: 1;
         position: relative;
         margin: auto;
         transition: opacity 0.85s;
