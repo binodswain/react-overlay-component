@@ -112,6 +112,7 @@ class RootComponent extends Component {
             if (isOpen) {
                 closeOverlay();
             }
+            event.stopPropagation();
         }
     };
 
