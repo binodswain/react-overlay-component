@@ -18,6 +18,7 @@ const backdrop = (props) => {
         if (canClose && isBackdrop) {
             closeOverlay();
         }
+        e.stopPropagation();
     };
 
     return (
