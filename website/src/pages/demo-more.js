@@ -421,8 +421,6 @@ const OverlayWithNested = () => {
 
     const configs = {
         animate: true,
-        clickDismiss: false,
-        escapeDismiss: false,
         showCloseIcon: false,
         focusOutline: true,
     };
@@ -510,8 +508,6 @@ const OverlayWithNested = () => {
 
   const configs = {
     animate: true,
-    clickDismiss: false,
-    escapeDismiss: false,
     showCloseIcon: false,
     focusOutline: true,
   }

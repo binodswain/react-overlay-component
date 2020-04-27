@@ -8,7 +8,7 @@
             (e.__esModule = !0),
             (e.withPrefix = d),
             (e.withAssetPrefix = function (t) {
-                return ["/react-overlay-component"].concat([t.replace(/^\//, "")]).join("/");
+                return [""].concat([t.replace(/^\//, "")]).join("/");
             }),
             (e.navigateTo = e.replace = e.push = e.navigate = e.default = void 0);
             const o = r(n("8OQS")),
@@ -23,7 +23,7 @@
             function d(t) {
                 return (function (t) {
                     return t.replace(/\/+/g, "/");
-                })(["/react-overlay-component", t].join("/"));
+                })(["", t].join("/"));
             }
             e.parsePath = p.parsePath;
             const h = {
@@ -2681,7 +2681,7 @@
                 )
                 : "serviceWorker" in navigator &&
                   navigator.serviceWorker
-                      .register("/react-overlay-component/sw.js")
+                      .register("/sw.js")
                       .then(function (t) {
                           t.addEventListener("updatefound", function () {
                               Object(r.apiRunner)("onServiceWorkerUpdateFound", {
@@ -3299,7 +3299,7 @@
                                             i.a.createElement(
                                                 u.Router,
                                                 {
-                                                    basepath: "/react-overlay-component",
+                                                    basepath: "",
                                                     location: o,
                                                     id: "gatsby-focus-wrapper",
                                                 },
@@ -3311,7 +3311,7 @@
                                                                     "/404.html" === r.page.path
                                                                         ? Object(L.a)(
                                                                             o.pathname,
-                                                                            "/react-overlay-component",
+                                                                            "",
                                                                         )
                                                                         : encodeURI(
                                                                             r.page.matchPath ||
@@ -3335,16 +3335,14 @@
                     a = o.pagePath,
                     l = o.location;
                 a &&
-                        "/react-overlay-component" + a !== l.pathname &&
+                        "" + a !== l.pathname &&
                         !(
-                            U.findMatchPath(Object(L.a)(l.pathname, "/react-overlay-component")) ||
+                            U.findMatchPath(Object(L.a)(l.pathname, "")) ||
                             "/404.html" === a ||
                             a.match(/^\/404\/?$/) ||
                             a.match(/^\/offline-plugin-app-shell-fallback\/?$/)
                         ) &&
-                        Object(u.navigate)("/react-overlay-component" + a + l.search + l.hash, {
-                            replace: !0,
-                        }),
+                        Object(u.navigate)("" + a + l.search + l.hash, { replace: !0 }),
                 p.publicLoader.loadPage(l.pathname).then(function (t) {
                     if (!t || t.status === p.PageResourceStatus.Error)
                         throw new Error(
@@ -4519,7 +4517,7 @@
                 d = [],
                 h = function (t) {
                     const e = decodeURIComponent(t);
-                    return Object(u.a)(e, "/react-overlay-component").split("#")[0].split("?")[0];
+                    return Object(u.a)(e, "").split("#")[0].split("?")[0];
                 },
                 v = function (t) {
                     for (var e, n = m(t), r = l(d); !(e = r()).done; ) {
@@ -4578,7 +4576,7 @@
                 S = function (t) {
                     let e;
                     return (
-                        "/react-overlay-component/page-data/" +
+                        "/page-data/" +
                         ("/" === t
                             ? "index"
                             : (e = (e = "/" === (e = t)[0] ? e.slice(1) : e).endsWith("/")
@@ -4781,24 +4779,20 @@
                             const e = this;
                             return (
                                 void 0 === t && (t = 0),
-                                x("/react-overlay-component/page-data/app-data.json").then(
-                                    function (n) {
-                                        let r,
-                                            o = n.status,
-                                            i = n.responseText;
-                                        if (200 !== o && t < 3) return e.loadAppData(t + 1);
-                                        if (200 === o)
-                                            try {
-                                                const a = JSON.parse(i);
-                                                if (void 0 === a.webpackCompilationHash)
-                                                    throw new Error(
-                                                        "not a valid app-data response",
-                                                    );
-                                                r = a;
-                                            } catch (c) {}
-                                        return r;
-                                    },
-                                )
+                                x("/page-data/app-data.json").then(function (n) {
+                                    let r,
+                                        o = n.status,
+                                        i = n.responseText;
+                                    if (200 !== o && t < 3) return e.loadAppData(t + 1);
+                                    if (200 === o)
+                                        try {
+                                            const a = JSON.parse(i);
+                                            if (void 0 === a.webpackCompilationHash)
+                                                throw new Error("not a valid app-data response");
+                                            r = a;
+                                        } catch (c) {}
+                                    return r;
+                                })
                             );
                         }),
                         t
@@ -4806,7 +4800,7 @@
                 })(),
                 R = function (t) {
                     return (window.___chunkMapping[t] || []).map(function (t) {
-                        return "/react-overlay-component" + t;
+                        return "" + t;
                     });
                 },
                 k = (function (t) {
@@ -5947,4 +5941,4 @@
     },
     [["UxWs", 8, 7]],
 ]);
-//# sourceMappingURL=app-1bfb5fcad792bf443722.js.map
+//# sourceMappingURL=app-785a4965ea6aa0660126.js.map
