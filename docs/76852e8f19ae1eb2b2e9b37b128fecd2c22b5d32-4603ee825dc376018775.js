@@ -12,8 +12,8 @@
             }
             n("sc67"), n("AqHK"), n("pJf4"), n("pS08"), n("R48M");
             const o = n("q1tI"),
-                i = r(o),
-                a = r(n("Gytx"));
+                a = r(o),
+                i = r(n("Gytx"));
             function u(t, e, n) {
                 return (
                     e in t
@@ -77,7 +77,7 @@
                         const u = o.prototype;
                         return (
                             (u.shouldComponentUpdate = function (t) {
-                                return !a(t, this.props);
+                                return !i(t, this.props);
                             }),
                             (u.componentWillMount = function () {
                                 l.push(this), f();
@@ -90,7 +90,7 @@
                                 l.splice(t, 1), f();
                             }),
                             (u.render = function () {
-                                return i.createElement(r, this.props);
+                                return a.createElement(r, this.props);
                             }),
                             o
                         );
@@ -116,14 +116,14 @@
             
             const r = n("IRj2"),
                 o = n("q1tI"),
-                i = n.n(o),
-                a = n("Wbzz"),
+                a = n.n(o),
+                i = n("Wbzz"),
                 u = function (t) {
                     const e = t.siteTitle;
-                    return i.a.createElement(
+                    return a.a.createElement(
                         "header",
                         { style: { background: "rebeccapurple", marginBottom: "1.45rem" } },
-                        i.a.createElement(
+                        a.a.createElement(
                             "div",
                             {
                                 style: {
@@ -132,11 +132,11 @@
                                     padding: "1.45rem 1.0875rem",
                                 },
                             },
-                            i.a.createElement(
+                            a.a.createElement(
                                 "h1",
                                 { style: { margin: 0 } },
-                                i.a.createElement(
-                                    a.a,
+                                a.a.createElement(
+                                    i.a,
                                     { to: "/", style: { color: "white", textDecoration: "none" } },
                                     e,
                                 ),
@@ -151,10 +151,10 @@
             (e.a = function (t) {
                 const e = t.children;
                 r.data;
-                return i.a.createElement(
-                    i.a.Fragment,
+                return a.a.createElement(
+                    a.a.Fragment,
                     null,
-                    i.a.createElement(
+                    a.a.createElement(
                         "div",
                         {
                             style: {
@@ -164,18 +164,18 @@
                                 paddingTop: 0,
                             },
                         },
-                        i.a.createElement("main", null, e),
-                        i.a.createElement(
+                        a.a.createElement("main", null, e),
+                        a.a.createElement(
                             "footer",
                             null,
                             "MIT © ",
-                            i.a.createElement(
+                            a.a.createElement(
                                 "a",
                                 { href: "https://github.com/binodswain" },
                                 "binodswain",
                             ),
                             " ",
-                            i.a.createElement("br", null),
+                            a.a.createElement("br", null),
                         ),
                     ),
                 );
@@ -184,32 +184,32 @@
         C9fy: function (t, e, n) {
             const r = Date.prototype,
                 o = r.toString,
-                i = r.getTime;
+                a = r.getTime;
             new Date(NaN) + "" != "Invalid Date" &&
                 n("IYdN")(r, "toString", function () {
-                    const t = i.call(this);
+                    const t = a.call(this);
                     return t == t ? o.call(this) : "Invalid Date";
                 });
         },
         EH9Q: function (t) {
             t.exports = JSON.parse(
-                '{"data":{"site":{"siteMetadata":{"title":"react-overlay-component","description":"React package","author":"@swain_binod"}}}}',
+                '{"data":{"site":{"siteMetadata":{"title":"react-overlay-component","description":"React package to render a modal/overlay.","author":"@swain_binod"}}}}',
             );
         },
         "EU/P": function (t, e, n) {
             var r = n("P8UN"),
                 o = n("ap2Z"),
-                i = n("96qb"),
-                a = n("+VNo"),
-                u = "[" + a + "]",
+                a = n("96qb"),
+                i = n("+VNo"),
+                u = "[" + i + "]",
                 c = RegExp("^" + u + u + "*"),
                 s = RegExp(u + u + "*$"),
                 l = function (t, e, n) {
                     const o = {},
-                        u = i(function () {
-                            return !!a[t]() || "​" != "​"[t]();
+                        u = a(function () {
+                            return !!i[t]() || "​" != "​"[t]();
                         }),
-                        c = (o[t] = u ? e(f) : a[t]);
+                        c = (o[t] = u ? e(f) : i[t]);
                     n && (o[n] = c), r(r.P + r.F * u, "String", o);
                 },
                 f = (l.trim = function (t, e) {
@@ -233,15 +233,15 @@
                 if (void 0 !== o) return !!o;
                 if (t === e) return !0;
                 if ("object" != typeof t || !t || "object" != typeof e || !e) return !1;
-                const i = Object.keys(t),
-                    a = Object.keys(e);
-                if (i.length !== a.length) return !1;
+                const a = Object.keys(t),
+                    i = Object.keys(e);
+                if (a.length !== i.length) return !1;
                 for (
                     let u = Object.prototype.hasOwnProperty.bind(e), c = 0;
-                    c < i.length;
+                    c < a.length;
                     c++
                 ) {
-                    const s = i[c];
+                    const s = a[c];
                     if (!u(s)) return !1;
                     const l = t[s],
                         f = e[s];
@@ -302,8 +302,8 @@
                         return n && t(e.prototype, n), r && t(e, r), e;
                     };
                 })(),
-                i = f(n("q1tI")),
-                a = f(n("17x9")),
+                a = f(n("q1tI")),
+                i = f(n("17x9")),
                 u = f(n("8+s/")),
                 c = f(n("bmMU")),
                 s = n("v1p5"),
@@ -386,13 +386,13 @@
                                 let e,
                                     n = t.child,
                                     o = t.arrayTypeChildren,
-                                    i = t.newChildProps,
-                                    a = t.nestedChildren;
+                                    a = t.newChildProps,
+                                    i = t.nestedChildren;
                                 return r(
                                     {},
                                     o,
                                     (((e = {})[n.type] = [].concat(o[n.type] || [], [
-                                        r({}, i, this.mapNestedChildrenToProps(n, a)),
+                                        r({}, a, this.mapNestedChildrenToProps(n, i)),
                                     ])),
                                     e),
                                 );
@@ -401,24 +401,24 @@
                                 let e,
                                     n,
                                     o = t.child,
-                                    i = t.newProps,
-                                    a = t.newChildProps,
+                                    a = t.newProps,
+                                    i = t.newChildProps,
                                     u = t.nestedChildren;
                                 switch (o.type) {
                                     case l.TAG_NAMES.TITLE:
                                         return r(
                                             {},
-                                            i,
+                                            a,
                                             (((e = {})[o.type] = u),
-                                            (e.titleAttributes = r({}, a)),
+                                            (e.titleAttributes = r({}, i)),
                                             e),
                                         );
                                     case l.TAG_NAMES.BODY:
-                                        return r({}, i, { bodyAttributes: r({}, a) });
+                                        return r({}, a, { bodyAttributes: r({}, i) });
                                     case l.TAG_NAMES.HTML:
-                                        return r({}, i, { htmlAttributes: r({}, a) });
+                                        return r({}, a, { htmlAttributes: r({}, i) });
                                 }
-                                return r({}, i, (((n = {})[o.type] = r({}, a)), n));
+                                return r({}, a, (((n = {})[o.type] = r({}, i)), n));
                             }),
                             (e.prototype.mapArrayTypeChildrenToProps = function (t, e) {
                                 let n = r({}, e);
@@ -437,13 +437,13 @@
                                 let n = this,
                                     r = {};
                                 return (
-                                    i.default.Children.forEach(t, function (t) {
+                                    a.default.Children.forEach(t, function (t) {
                                         if (t && t.props) {
                                             const o = t.props,
-                                                i = o.children,
-                                                a = T(o, ["children"]),
-                                                u = (0, s.convertReactPropstoHtmlAttributes)(a);
-                                            switch ((n.warnOnInvalidChildren(t, i), t.type)) {
+                                                a = o.children,
+                                                i = T(o, ["children"]),
+                                                u = (0, s.convertReactPropstoHtmlAttributes)(i);
+                                            switch ((n.warnOnInvalidChildren(t, a), t.type)) {
                                                 case l.TAG_NAMES.LINK:
                                                 case l.TAG_NAMES.META:
                                                 case l.TAG_NAMES.NOSCRIPT:
@@ -453,7 +453,7 @@
                                                         child: t,
                                                         arrayTypeChildren: r,
                                                         newChildProps: u,
-                                                        nestedChildren: i,
+                                                        nestedChildren: a,
                                                     });
                                                     break;
                                                 default:
@@ -461,7 +461,7 @@
                                                         child: t,
                                                         newProps: e,
                                                         newChildProps: u,
-                                                        nestedChildren: i,
+                                                        nestedChildren: a,
                                                     });
                                             }
                                         }
@@ -476,7 +476,7 @@
                                     o = r({}, n);
                                 return (
                                     e && (o = this.mapChildrenToProps(e, o)),
-                                    i.default.createElement(d, o)
+                                    a.default.createElement(d, o)
                                 );
                             }),
                             o(e, null, [
@@ -489,27 +489,27 @@
                             ]),
                             e
                         );
-                    })(i.default.Component)),
+                    })(a.default.Component)),
                     (A.propTypes = {
-                        base: a.default.object,
-                        bodyAttributes: a.default.object,
-                        children: a.default.oneOfType([
-                            a.default.arrayOf(a.default.node),
-                            a.default.node,
+                        base: i.default.object,
+                        bodyAttributes: i.default.object,
+                        children: i.default.oneOfType([
+                            i.default.arrayOf(i.default.node),
+                            i.default.node,
                         ]),
-                        defaultTitle: a.default.string,
-                        defer: a.default.bool,
-                        encodeSpecialCharacters: a.default.bool,
-                        htmlAttributes: a.default.object,
-                        link: a.default.arrayOf(a.default.object),
-                        meta: a.default.arrayOf(a.default.object),
-                        noscript: a.default.arrayOf(a.default.object),
-                        onChangeClientState: a.default.func,
-                        script: a.default.arrayOf(a.default.object),
-                        style: a.default.arrayOf(a.default.object),
-                        title: a.default.string,
-                        titleAttributes: a.default.object,
-                        titleTemplate: a.default.string,
+                        defaultTitle: i.default.string,
+                        defer: i.default.bool,
+                        encodeSpecialCharacters: i.default.bool,
+                        htmlAttributes: i.default.object,
+                        link: i.default.arrayOf(i.default.object),
+                        meta: i.default.arrayOf(i.default.object),
+                        noscript: i.default.arrayOf(i.default.object),
+                        onChangeClientState: i.default.func,
+                        script: i.default.arrayOf(i.default.object),
+                        style: i.default.arrayOf(i.default.object),
+                        title: i.default.string,
+                        titleAttributes: i.default.object,
+                        titleTemplate: i.default.string,
                     }),
                     (A.defaultProps = { defer: !0, encodeSpecialCharacters: !0 }),
                     (A.peek = d.peek),
@@ -541,10 +541,10 @@
             n("YBKJ");
             const r = n("q1tI"),
                 o = n.n(r),
-                i = n("+ZDr"),
-                a = n.n(i);
+                a = n("+ZDr"),
+                i = n.n(a);
             n.d(e, "a", function () {
-                return a.a;
+                return i.a;
             });
             n("lw3w"), n("emEt").default.enqueue, o.a.createContext({});
         },
@@ -553,8 +553,8 @@
             
             let r = n("emib"),
                 o = n("qDzq"),
-                i = n("CCE/"),
-                a = n("TUPI"),
+                a = n("CCE/"),
+                i = n("TUPI"),
                 u = n("kxs/"),
                 c = n("96qb"),
                 s = n("chL8").f,
@@ -564,7 +564,7 @@
                 p = r.Number,
                 E = p,
                 d = p.prototype,
-                A = "Number" == i(n("nsRs")(d)),
+                A = "Number" == a(n("nsRs")(d)),
                 h = "trim" in String.prototype,
                 m = function (t) {
                     let e = u(t, !1);
@@ -572,10 +572,10 @@
                         let n,
                             r,
                             o,
-                            i = (e = h ? e.trim() : T(e, 3)).charCodeAt(0);
-                        if (43 === i || 45 === i) {
+                            a = (e = h ? e.trim() : T(e, 3)).charCodeAt(0);
+                        if (43 === a || 45 === a) {
                             if (88 === (n = e.charCodeAt(2)) || 120 === n) return NaN;
-                        } else if (48 === i) {
+                        } else if (48 === a) {
                             switch (e.charCodeAt(1)) {
                                 case 66:
                                 case 98:
@@ -588,8 +588,8 @@
                                 default:
                                     return +e;
                             }
-                            for (var a, c = e.slice(2), s = 0, l = c.length; s < l; s++)
-                                if ((a = c.charCodeAt(s)) < 48 || a > o) return NaN;
+                            for (var i, c = e.slice(2), s = 0, l = c.length; s < l; s++)
+                                if ((i = c.charCodeAt(s)) < 48 || i > o) return NaN;
                             return parseInt(c, r);
                         }
                     }
@@ -604,8 +604,8 @@
                             ? c(function () {
                                 d.valueOf.call(n);
                             })
-                            : "Number" != i(n))
-                        ? a(new E(m(e)), n, p)
+                            : "Number" != a(n))
+                        ? i(new E(m(e)), n, p)
                         : m(e);
                 };
                 for (
@@ -637,8 +637,8 @@
             n("MIFh");
             const r = Array.isArray,
                 o = Object.keys,
-                i = Object.prototype.hasOwnProperty,
-                a = "undefined" != typeof Element;
+                a = Object.prototype.hasOwnProperty,
+                i = "undefined" != typeof Element;
             t.exports = function (t, e) {
                 try {
                     return (function t(e, n) {
@@ -665,8 +665,8 @@
                             if (E && d) return e.toString() == n.toString();
                             const A = o(e);
                             if ((c = A.length) !== o(n).length) return !1;
-                            for (u = c; 0 != u--; ) if (!i.call(n, A[u])) return !1;
-                            if (a && e instanceof Element && n instanceof Element) return e === n;
+                            for (u = c; 0 != u--; ) if (!a.call(n, A[u])) return !1;
+                            if (i && e instanceof Element && n instanceof Element) return e === n;
                             for (u = c; 0 != u--; )
                                 if (!(("_owner" === (s = A[u]) && e.$$typeof) || t(e[s], n[s])))
                                     return !1;
@@ -752,8 +752,8 @@
         klQ5: function (t, e, n) {
             let r = n("emib"),
                 o = n("TUPI"),
-                i = n("rjfK").f,
-                a = n("chL8").f,
+                a = n("rjfK").f,
+                i = n("chL8").f,
                 u = n("mhTz"),
                 c = n("lb9j"),
                 s = r.RegExp,
@@ -775,13 +775,13 @@
                 s = function (t, e) {
                     let n = this instanceof s,
                         r = u(t),
-                        i = void 0 === e;
-                    return !n && r && t.constructor === s && i
+                        a = void 0 === e;
+                    return !n && r && t.constructor === s && a
                         ? t
                         : o(
                             E
-                                ? new l(r && !i ? t.source : t, e)
-                                : l((r = t instanceof s) ? t.source : t, r && i ? c.call(t) : e),
+                                ? new l(r && !a ? t.source : t, e)
+                                : l((r = t instanceof s) ? t.source : t, r && a ? c.call(t) : e),
                             n ? this : f,
                             s,
                         );
@@ -789,7 +789,7 @@
                 for (
                     let d = function (t) {
                             (t in s) ||
-                                i(s, t, {
+                                a(s, t, {
                                     configurable: !0,
                                     get: function () {
                                         return l[t];
@@ -799,7 +799,7 @@
                                     },
                                 });
                         },
-                        A = a(l),
+                        A = i(l),
                         h = 0;
                     A.length > h;
 
@@ -819,13 +819,13 @@
             n("E5k/");
             const r = n("q1tI"),
                 o = n.n(r),
-                i = n("IOVJ");
+                a = n("IOVJ");
             e.default = function (t) {
                 const e = t.location,
                     n = t.pageResources;
                 return n
                     ? o.a.createElement(
-                        i.a,
+                        a.a,
                         Object.assign({ location: e, pageResources: n }, n.json),
                     )
                     : null;
@@ -875,8 +875,8 @@
                             }
                             return t;
                         },
-                    i = c(n("q1tI")),
-                    a = c(n("MgzW")),
+                    a = c(n("q1tI")),
+                    i = c(n("MgzW")),
                     u = n("hFT/");
                 function c(t) {
                     return t && t.__esModule ? t : { default: t };
@@ -930,8 +930,8 @@
                             .reduce(function (e, n) {
                                 if (!e.length)
                                     for (let r = Object.keys(n), o = 0; o < r.length; o++) {
-                                        const i = r[o].toLowerCase();
-                                        if (-1 !== t.indexOf(i) && n[i]) return e.concat(n);
+                                        const a = r[o].toLowerCase();
+                                        if (-1 !== t.indexOf(a) && n[a]) return e.concat(n);
                                     }
                                 return e;
                             }, []);
@@ -961,11 +961,11 @@
                                 const r = {};
                                 n.filter(function (t) {
                                     for (
-                                        var n = void 0, i = Object.keys(t), a = 0;
-                                        a < i.length;
-                                        a++
+                                        var n = void 0, a = Object.keys(t), i = 0;
+                                        i < a.length;
+                                        i++
                                     ) {
-                                        const c = i[a],
+                                        const c = a[i],
                                             s = c.toLowerCase();
                                         -1 === e.indexOf(s) ||
                                             (n === u.TAG_PROPERTIES.REL &&
@@ -991,9 +991,9 @@
                                     .forEach(function (e) {
                                         return t.push(e);
                                     });
-                                for (let i = Object.keys(r), c = 0; c < i.length; c++) {
-                                    const s = i[c],
-                                        l = (0, a.default)({}, o[s], r[s]);
+                                for (let a = Object.keys(r), c = 0; c < a.length; c++) {
+                                    const s = a[c],
+                                        l = (0, i.default)({}, o[s], r[s]);
                                     o[s] = l;
                                 }
                                 return t;
@@ -1042,8 +1042,8 @@
                         const n = t.baseTag,
                             r = t.bodyAttributes,
                             o = t.htmlAttributes,
-                            i = t.linkTags,
-                            a = t.metaTags,
+                            a = t.linkTags,
+                            i = t.metaTags,
                             c = t.noscriptTags,
                             s = t.onChangeClientState,
                             l = t.scriptTags,
@@ -1053,8 +1053,8 @@
                         P(u.TAG_NAMES.BODY, r), P(u.TAG_NAMES.HTML, o), R(T, p);
                         const E = {
                                 baseTag: I(u.TAG_NAMES.BASE, n),
-                                linkTags: I(u.TAG_NAMES.LINK, i),
-                                metaTags: I(u.TAG_NAMES.META, a),
+                                linkTags: I(u.TAG_NAMES.LINK, a),
+                                metaTags: I(u.TAG_NAMES.META, i),
                                 noscriptTags: I(u.TAG_NAMES.NOSCRIPT, c),
                                 scriptTags: I(u.TAG_NAMES.SCRIPT, l),
                                 styleTags: I(u.TAG_NAMES.STYLE, f),
@@ -1083,32 +1083,32 @@
                             for (
                                 var r = n.getAttribute(u.HELMET_ATTRIBUTE),
                                     o = r ? r.split(",") : [],
-                                    i = [].concat(o),
-                                    a = Object.keys(e),
+                                    a = [].concat(o),
+                                    i = Object.keys(e),
                                     c = 0;
-                                c < a.length;
+                                c < i.length;
                                 c++
                             ) {
-                                const s = a[c],
+                                const s = i[c],
                                     l = e[s] || "";
                                 n.getAttribute(s) !== l && n.setAttribute(s, l),
                                 -1 === o.indexOf(s) && o.push(s);
-                                const f = i.indexOf(s);
-                                -1 !== f && i.splice(f, 1);
+                                const f = a.indexOf(s);
+                                -1 !== f && a.splice(f, 1);
                             }
-                            for (let T = i.length - 1; T >= 0; T--) n.removeAttribute(i[T]);
-                            o.length === i.length
+                            for (let T = a.length - 1; T >= 0; T--) n.removeAttribute(a[T]);
+                            o.length === a.length
                                 ? n.removeAttribute(u.HELMET_ATTRIBUTE)
-                                : n.getAttribute(u.HELMET_ATTRIBUTE) !== a.join(",") &&
-                                  n.setAttribute(u.HELMET_ATTRIBUTE, a.join(","));
+                                : n.getAttribute(u.HELMET_ATTRIBUTE) !== i.join(",") &&
+                                  n.setAttribute(u.HELMET_ATTRIBUTE, i.join(","));
                         }
                     },
                     I = function (t, e) {
                         let n = document.head || document.querySelector(u.TAG_NAMES.HEAD),
                             r = n.querySelectorAll(t + "[" + u.HELMET_ATTRIBUTE + "]"),
                             o = Array.prototype.slice.call(r),
-                            i = [],
-                            a = void 0;
+                            a = [],
+                            i = void 0;
                         return (
                             e &&
                                 e.length &&
@@ -1130,18 +1130,18 @@
                                             }
                                     n.setAttribute(u.HELMET_ATTRIBUTE, "true"),
                                     o.some(function (t, e) {
-                                        return (a = e), n.isEqualNode(t);
+                                        return (i = e), n.isEqualNode(t);
                                     })
-                                        ? o.splice(a, 1)
-                                        : i.push(n);
+                                        ? o.splice(i, 1)
+                                        : a.push(n);
                                 }),
                             o.forEach(function (t) {
                                 return t.parentNode.removeChild(t);
                             }),
-                            i.forEach(function (t) {
+                            a.forEach(function (t) {
                                 return n.appendChild(t);
                             }),
-                            { oldTags: o, newTags: i }
+                            { oldTags: o, newTags: a }
                         );
                     },
                     M = function (t) {
@@ -1166,14 +1166,14 @@
                                             (n = e.titleAttributes),
                                             ((r = { key: t })[u.HELMET_ATTRIBUTE] = !0),
                                             (o = O(n, r)),
-                                            [i.default.createElement(u.TAG_NAMES.TITLE, o, t)]
+                                            [a.default.createElement(u.TAG_NAMES.TITLE, o, t)]
                                         );
                                         let t, n, r, o;
                                     },
                                     toString: function () {
                                         return (function (t, e, n, r) {
                                             const o = M(n),
-                                                i = g(e);
+                                                a = g(e);
                                             return o
                                                 ? "<" +
                                                       t +
@@ -1182,7 +1182,7 @@
                                                       '="true" ' +
                                                       o +
                                                       ">" +
-                                                      l(i, r) +
+                                                      l(a, r) +
                                                       "</" +
                                                       t +
                                                       ">"
@@ -1191,7 +1191,7 @@
                                                       " " +
                                                       u.HELMET_ATTRIBUTE +
                                                       '="true">' +
-                                                      l(i, r) +
+                                                      l(a, r) +
                                                       "</" +
                                                       t +
                                                       ">";
@@ -1232,7 +1232,7 @@
                                                             };
                                                         } else o[n] = e[t];
                                                     }),
-                                                    i.default.createElement(t, o)
+                                                    a.default.createElement(t, o)
                                                 );
                                             });
                                         })(t, e);
@@ -1254,8 +1254,8 @@
                                                                     : e + '="' + l(r[e], n) + '"';
                                                             return t ? t + " " + o : o;
                                                         }, ""),
-                                                    i = r.innerHTML || r.cssText || "",
-                                                    a = -1 === u.SELF_CLOSING_TAGS.indexOf(t);
+                                                    a = r.innerHTML || r.cssText || "",
+                                                    i = -1 === u.SELF_CLOSING_TAGS.indexOf(t);
                                                 return (
                                                     e +
                                                     "<" +
@@ -1264,7 +1264,7 @@
                                                     u.HELMET_ATTRIBUTE +
                                                     '="true" ' +
                                                     o +
-                                                    (a ? "/>" : ">" + i + "</" + t + ">")
+                                                    (i ? "/>" : ">" + a + "</" + t + ">")
                                                 );
                                             }, "");
                                         })(t, e, n);
@@ -1293,8 +1293,8 @@
                         n = t.bodyAttributes,
                         r = t.encode,
                         o = t.htmlAttributes,
-                        i = t.linkTags,
-                        a = t.metaTags,
+                        a = t.linkTags,
+                        i = t.metaTags,
                         c = t.noscriptTags,
                         s = t.scriptTags,
                         l = t.styleTags,
@@ -1305,8 +1305,8 @@
                         base: N(u.TAG_NAMES.BASE, e, r),
                         bodyAttributes: N(u.ATTRIBUTE_NAMES.BODY, n, r),
                         htmlAttributes: N(u.ATTRIBUTE_NAMES.HTML, o, r),
-                        link: N(u.TAG_NAMES.LINK, i, r),
-                        meta: N(u.TAG_NAMES.META, a, r),
+                        link: N(u.TAG_NAMES.LINK, a, r),
+                        meta: N(u.TAG_NAMES.META, i, r),
                         noscript: N(u.TAG_NAMES.NOSCRIPT, c, r),
                         script: N(u.TAG_NAMES.SCRIPT, s, r),
                         style: N(u.TAG_NAMES.STYLE, l, r),
@@ -1356,28 +1356,28 @@
             
             const r = n("EH9Q"),
                 o = n("q1tI"),
-                i = n.n(o),
-                a = n("TJpk"),
-                u = n.n(a);
+                a = n.n(o),
+                i = n("TJpk"),
+                u = n.n(i);
             function c(t) {
                 const e = t.description,
                     n = t.lang,
                     o = t.meta,
-                    a = t.title,
+                    i = t.title,
                     c = r.data.site,
                     s = e || c.siteMetadata.description;
-                return i.a.createElement(u.a, {
+                return a.a.createElement(u.a, {
                     htmlAttributes: { lang: n },
-                    title: a,
+                    title: i,
                     titleTemplate: "" + c.siteMetadata.title,
                     meta: [
                         { name: "description", content: s },
-                        { property: "og:title", content: a },
+                        { property: "og:title", content: i },
                         { property: "og:description", content: s },
                         { property: "og:type", content: "website" },
                         { name: "twitter:card", content: "summary" },
                         { name: "twitter:creator", content: c.siteMetadata.author },
-                        { name: "twitter:title", content: a },
+                        { name: "twitter:title", content: i },
                         { name: "twitter:description", content: s },
                     ].concat(o),
                 });
@@ -1398,4 +1398,4 @@
         },
     },
 ]);
-//# sourceMappingURL=76852e8f19ae1eb2b2e9b37b128fecd2c22b5d32-db0a85c0586418d12504.js.map
+//# sourceMappingURL=76852e8f19ae1eb2b2e9b37b128fecd2c22b5d32-4603ee825dc376018775.js.map

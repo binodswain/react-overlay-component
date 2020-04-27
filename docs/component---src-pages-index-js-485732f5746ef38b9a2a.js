@@ -10,9 +10,9 @@
                 o = a("Bl7J"),
                 c = a("vrFN"),
                 s = a("TwNY"),
-                i = a("QLbG"),
-                m = a("jHpe"),
-                u = a.n(m);
+                m = a("QLbG"),
+                i = a("jHpe"),
+                u = a.n(i);
             a("y1X9"), a("QWvX"), a("ZgVT"), a("bPOv"), a("85O/"), a("CjHp"), a("hL/g");
             t.default = function () {
                 Object(n.useEffect)(function () {
@@ -30,6 +30,14 @@
                     l.a.createElement(
                         "section",
                         { className: "badges" },
+                        l.a.createElement(
+                            "a",
+                            { href: "https://www.npmjs.com/package/react-overlay-component" },
+                            l.a.createElement("img", {
+                                src: "https://badgen.net/npm/v/react-overlay-component",
+                                alt: "npm version",
+                            }),
+                        ),
                         l.a.createElement(
                             "a",
                             {
@@ -96,7 +104,7 @@
                         ),
                         l.a.createElement("br", null),
                         l.a.createElement(
-                            i.a,
+                            m.a,
                             {
                                 configs: { animate: !0 },
                                 isOpen: t,
@@ -228,4 +236,4 @@
         },
     },
 ]);
-//# sourceMappingURL=component---src-pages-index-js-d8e68cfc507af85b29c9.js.map
+//# sourceMappingURL=component---src-pages-index-js-485732f5746ef38b9a2a.js.map
