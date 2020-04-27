@@ -206,6 +206,7 @@ class RootComponent extends Component {
             className,
             onKeyPress: escapeDismiss ? (e) => this.keyPress(e) : undefined,
             onKeyDown: escapeDismiss ? (e) => this.keyPress(e) : undefined,
+            "aria-hidden": !isOpen,
         };
 
         const contentAttrs = {
@@ -217,6 +218,7 @@ class RootComponent extends Component {
                 .filter(Boolean)
                 .join(" "),
             tabIndex: 0,
+            role: "dialog",
         };
 
         const style = {

@@ -6,51 +6,6 @@ import Gitfork from "../components/githubFork";
 import Overlay from "react-overlay-component";
 import Prism from "prismjs";
 
-const dataJSON = {
-    title: "FAQ title",
-    rows: [
-        {
-            title: "Question 1",
-            content: "Answer 1",
-        },
-        {
-            title: "Question 2",
-            content: "Answer 2",
-        },
-    ],
-};
-
-const data = {
-    title: "FAQ (How it works)",
-    rows: [
-        {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat, 
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus. 
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae. 
-              Fusce sed commodo purus, at tempus turpis.`,
-        },
-        {
-            title: "Nunc maximus, magna at ultricies elementum",
-            content:
-        "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
-        },
-        {
-            title: "Can I use html as content",
-            content: `Yes, here is an example of a <a href="https://binodswain.github.io/react-faq-component/">link</a>`,
-        },
-        {
-            title: "What is the package version",
-            content: "v1.0.5",
-        },
-    ],
-};
-
-const config = {
-    animate: true,
-    // arrowIcon: "V",
-};
-
 const htmlcode = `import React, { useState } from "react";
 import Overlay from "react-overlay-component";
 
@@ -126,6 +81,9 @@ const IndexPage = () => {
             <h1>react-overlay-component</h1>
 
             <section className="badges">
+                <a href="https://www.npmjs.com/package/react-overlay-component">
+                    <img src="https://badgen.net/npm/v/react-overlay-component" alt="npm version" />
+                </a>
                 <a href="https://github.com/binodswain/react-overlay-component/actions">
                     <img
                         src="https://github.com/binodswain/react-overlay-component/workflows/Test/badge.svg"
@@ -169,15 +127,15 @@ const IndexPage = () => {
                     <h2>Sample header</h2>
                     <p>text content</p>
                     <p>
-                        Nullam cursus fermentum elit eu convallis. Donec non turpis eu dolor tristique mollis
-                        nec vel mauris. Suspendisse rutrum, odio sed tristique ultricies, ante urna egestas
-                        neque, non ornare ipsum erat eu felis. Proin nec enim sodales sem ullamcorper egestas.
-                        Duis quis sagittis ante. Morbi nibh ex, lacinia ac convallis eu, sagittis ut turpis.
-                        Etiam ultrices viverra diam, et dignissim dolor commodo rhoncus. Aenean euismod lacus eu
-                        sapien dictum, a efficitur mi condimentum. Mauris non enim lacus. Nulla tempor et dolor
-                        et fringilla. Praesent tempor sapien et porttitor aliquam. Phasellus vulputate libero
-                        volutpat, sagittis eros quis, eleifend lacus. Etiam eget metus quis tortor egestas
-                        lacinia.
+            Nullam cursus fermentum elit eu convallis. Donec non turpis eu dolor tristique mollis
+            nec vel mauris. Suspendisse rutrum, odio sed tristique ultricies, ante urna egestas
+            neque, non ornare ipsum erat eu felis. Proin nec enim sodales sem ullamcorper egestas.
+            Duis quis sagittis ante. Morbi nibh ex, lacinia ac convallis eu, sagittis ut turpis.
+            Etiam ultrices viverra diam, et dignissim dolor commodo rhoncus. Aenean euismod lacus eu
+            sapien dictum, a efficitur mi condimentum. Mauris non enim lacus. Nulla tempor et dolor
+            et fringilla. Praesent tempor sapien et porttitor aliquam. Phasellus vulputate libero
+            volutpat, sagittis eros quis, eleifend lacus. Etiam eget metus quis tortor egestas
+            lacinia.
                     </p>
                 </Overlay>
 

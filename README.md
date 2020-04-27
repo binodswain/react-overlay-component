@@ -54,8 +54,7 @@ function App() {
                         setOverlay(false);
                     }}
                 >
-                    {" "}
-                    close modal{" "}
+                    close modal
                 </button>
             </Overlay>
         </div>

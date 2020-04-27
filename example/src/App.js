@@ -5,9 +5,11 @@ import Overlay from "react-overlay-component";
 function App() {
     const [isOpen, setOverlay] = useState(false);
     const [isOpen1, setOverlay1] = useState(false);
+    const [isOpen2, setOverlay2] = useState(false);
 
     const closeOverlay = () => setOverlay(false);
     const closeOverlay1 = () => setOverlay1(false);
+    const closeOverlay2 = () => setOverlay2(false);
 
     const configs = {
         contentClass: "container overlay-content",
@@ -65,6 +67,25 @@ function App() {
             </button>
             <Overlay configs={configs1} isOpen={isOpen1} closeOverlay={closeOverlay1}>
                 <h3>Modal with large content</h3>
+                <button
+                    className="primary"
+                    onClick={() => {
+                        setOverlay2(true);
+                    }}
+                >
+                    open modal 0
+                </button>
+                <Overlay configs={configs} isOpen={isOpen2} closeOverlay={closeOverlay2}>
+                    Hello there <br />
+                    <button
+                        className="danger"
+                        onClick={() => {
+                            setOverlay2(false);
+                        }}
+                    >
+                        close
+                    </button>
+                </Overlay>
                 <p>
                     Nullam cursus fermentum elit eu convallis. Donec non turpis eu dolor tristique
                     mollis nec vel mauris. Suspendisse rutrum, odio sed tristique ultricies, ante

@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/react-overlay-component",
   siteMetadata: {
     title: `react-overlay-component`,
-    description: `React package`,
+    description: `React package to render a modal/overlay.`,
     author: `@swain_binod`,
   },
   plugins: [
