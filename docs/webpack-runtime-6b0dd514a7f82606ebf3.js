@@ -194,7 +194,7 @@
     (u.o = function (e, t) {
         return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (u.p = "/"),
+    (u.p = "/react-overlay-component/"),
     (u.oe = function (e) {
         throw (console.error(e), e);
     });
@@ -205,4 +205,4 @@
     var i = s;
     r();
 })([]);
-//# sourceMappingURL=webpack-runtime-86fe5f4ae3685519c649.js.map
+//# sourceMappingURL=webpack-runtime-6b0dd514a7f82606ebf3.js.map
