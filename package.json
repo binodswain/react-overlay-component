@@ -1,6 +1,6 @@
 {
     "name": "react-overlay-component",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "description": "npm package to render overlay/modal with backdrop",
@@ -22,7 +22,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/binodswain/react-faq-component.git"
+        "url": "git+https://github.com/binodswain/react-overlay-component.git"
     },
     "jest": {
         "moduleNameMapper": {
@@ -83,7 +83,7 @@
         "react-overlay",
         "react-overlay-component"
     ],
-    "author": "“Binod <binodkumarswain94@gmail.com> (binodswain@github.io)",
+    "author": "Binod <binodkumarswain94@gmail.com> (binodswain@github.io)",
     "license": "MIT",
     "lint-staged": {
         "*.scss": [
