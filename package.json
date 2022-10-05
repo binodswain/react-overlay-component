@@ -1,6 +1,6 @@
 {
     "name": "react-overlay-component",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "description": "npm package to render overlay/modal with backdrop",
